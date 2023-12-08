@@ -1,0 +1,75 @@
+from enum import Enum
+
+
+class DescriptorTypeNames(str, Enum):
+    COL_INTEGER = "COL_INTEGER"
+    COL_FLOAT = "COL_FLOAT"
+    COL_STRING = "COL_STRING"
+    COL_DATETIME = "COL_DATETIME"
+    COL_DATE = "COL_DATE"
+    COL_TIME = "COL_TIME"
+    SEQUENCE = "SEQUENCE"
+
+
+class ColumnBehaviourTypeName(str, Enum):
+    INCREMENT = "INCREMENT"
+    UNIQUE = "UNIQUE"
+    UNIFORM_DISTRIBUTION = "UNIFORM_DISTRIBUTION"
+    NORMAL_DISTRIBUTION = "NORMAL_DISTRIBUTION"
+    EXPONENTIAL_DISTRIBUTION = "EXPONENTIAL_DISTRIBUTION"
+    WEIGHTS_TABLE = "WEIGHTS_TABLE"
+    TEMPLATE_LABEL = "TEMPLATE_LABEL"
+    TEMPLATE_TIMESTAMP = "TEMPLATE_TIMESTAMP"
+    TEMPLATE_TIMESERIES = "TEMPLATE_TIMESERIES"
+    TEMPLATE_GEOLOCATION = "TEMPLATE_GEOLOCATION"
+
+
+class SequenceBehaviourTypeName(str, Enum):
+    SEQ_LOOP = "LOOP"
+    SEQ_LOOP_RANDOM = "LOOP_RANDOM"
+    SEQ_TEMPLATE_SEQUENCE = "TEMPLATE_SEQUENCE"
+
+
+class ColumnVisibilityType(str, Enum):
+    VISIBLE = "VISIBLE"
+    HIDDEN = "HIDDEN"
+    INTERNAL = "INTERNAL"
+
+
+class DatetimePrecisionType(str, Enum):
+    MILLISECOND = "MILLISECOND"
+    SECOND = "SECOND"
+    MINUTE = "MINUTE"
+    HOUR = "HOUR"
+    DAY = "DAY"
+    WEEK = "WEEK"
+    MONTH = "MONTH"
+    YEAR = "YEAR"
+
+
+class DatePrecisionType(str, Enum):
+    DAY = "DAY"
+    WEEK = "WEEK"
+    MONTH = "MONTH"
+    YEAR = "YEAR"
+
+
+class TimePrecisionType(str, Enum):
+    MILLISECOND = "MILLISECOND"
+    SECOND = "SECOND"
+    MINUTE = "MINUTE"
+    HOUR = "HOUR"
+
+
+class GeoCoordinateType(Enum):
+    LONGITUDE_WGS84 = "LONGITUDE_WGS84"
+    LATITUDE_WGS84 = "LATITUDE_WGS84"
+    WKT_POINT = "WKT_POINT_WGS84"
+
+
+class TemplateType(str, Enum):
+    ID = "ID"
+    LABEL = "LABEL"
+    TIMESTAMP = "TIMESTAMP"
+    TIMESERIES = "TIMESERIES"
+    GEOLOCATION = "GEOLOCATION"
