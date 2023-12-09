@@ -18,7 +18,7 @@ You will find it beneficial if you need:
 ## Installation
 
 ```bash
-pip install smart_generator
+pip install smart-generator
 ```
 
 ## Usage
